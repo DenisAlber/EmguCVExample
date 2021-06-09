@@ -11,7 +11,9 @@ using System.Windows.Forms;
 using ConvexHullExample;
 using Emgu.CV;
 using Emgu.CV.CvEnum;
+using Emgu.CV.Features2D;
 using Emgu.CV.ImgHash;
+using Emgu.CV.Stitching;
 using Emgu.CV.Structure;
 using Emgu.CV.UI;
 using Emgu.CV.Util;
@@ -374,6 +376,51 @@ namespace EmguCVExamples
                 LowerThresholdLabel.Visible = true;
                 UpperThresholdLabel.Visible = true;
             }
+        }
+
+        private void stitchImage_Click(object sender, EventArgs e)
+        {
+            var path =
+                "C:\\Users\\Denis\\OneDrive - Duale Hochschule Baden-Württemberg Stuttgart\\BA\\Sample_Pictures\\picture";
+
+            var imageCollection = new List<Mat>();
+
+            for (int i = 0; i < 6; i++)
+            {
+                var num = i + 1;
+                imageCollection.Add(new Mat(path + num + ".png"));
+            }
+            //Declare the Mat object that will store the final output
+            Mat output = new Mat();
+
+            //Declare a vector to store all images from the list
+            VectorOfMat matVector = new VectorOfMat();
+
+            //Push all images in the list into a vector
+            foreach (Mat img in imageCollection)
+            {
+                matVector.Push(img);
+            }
+
+            //Declare a new stitcher
+            Stitcher stitcher = new Stitcher(Stitcher.Mode.Scans);
+
+            //Declare the type of detector that will be used to detect keypoints
+            Brisk detector = new Brisk();
+
+            //Here are some other detectors that you can try
+            //ORBDetector detector = new ORBDetector();
+            //KAZE detector = new KAZE();
+            //AKAZE detector = new AKAZE();
+
+            //Set the stitcher class to use the specified detector declared above
+            stitcher.SetFeaturesFinder(detector);
+
+            //Stitch the images together
+            stitcher.Stitch(matVector, output);
+
+            CvInvoke.Imwrite("C:\\Users\\Denis\\OneDrive - Duale Hochschule Baden-Württemberg Stuttgart\\BA\\Sample_Pictures\\Output.png", output);
+
         }
     }
 }

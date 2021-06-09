@@ -44,6 +44,7 @@
             this.upperThresholdBar = new System.Windows.Forms.TrackBar();
             this.LowerThresholdLabel = new System.Windows.Forms.Label();
             this.UpperThresholdLabel = new System.Windows.Forms.Label();
+            this.stitchImage = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.originalImageBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.proccesedImageBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lowerThresholdBar)).BeginInit();
@@ -226,6 +227,17 @@
             this.UpperThresholdLabel.Text = "High Threshold: 0";
             this.UpperThresholdLabel.Visible = false;
             // 
+            // stitchImage
+            // 
+            this.stitchImage.Location = new System.Drawing.Point(177, 11);
+            this.stitchImage.Margin = new System.Windows.Forms.Padding(2);
+            this.stitchImage.Name = "stitchImage";
+            this.stitchImage.Size = new System.Drawing.Size(80, 26);
+            this.stitchImage.TabIndex = 19;
+            this.stitchImage.Text = "Stitch Images";
+            this.stitchImage.UseVisualStyleBackColor = true;
+            this.stitchImage.Click += new System.EventHandler(this.stitchImage_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -233,6 +245,7 @@
             this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(989, 366);
+            this.Controls.Add(this.stitchImage);
             this.Controls.Add(this.UpperThresholdLabel);
             this.Controls.Add(this.LowerThresholdLabel);
             this.Controls.Add(this.upperThresholdBar);
@@ -277,6 +290,7 @@
         private System.Windows.Forms.TrackBar upperThresholdBar;
         private System.Windows.Forms.Label LowerThresholdLabel;
         private System.Windows.Forms.Label UpperThresholdLabel;
+        private System.Windows.Forms.Button stitchImage;
     }
 }
 
