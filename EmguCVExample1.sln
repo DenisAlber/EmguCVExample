@@ -5,9 +5,11 @@ VisualStudioVersion = 16.0.30523.141
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmguCVExamples", "EmguCVExamples\EmguCVExamples.csproj", "{8CD402C3-E0D3-4CEA-B1B6-9E430CD10302}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConvexHullExample", "ConvexHullExample\ConvexHullExample.csproj", "{1E773C3F-F6B0-446F-AE34-322F32F065AD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConvexHullExample", "ConvexHullExample\ConvexHullExample.csproj", "{1E773C3F-F6B0-446F-AE34-322F32F065AD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FaceDetectionExample", "FaceDetection\FaceDetectionExample.csproj", "{9F8FB859-A4AE-4705-BE12-9382DF46E834}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FaceDetectionExample", "FaceDetection\FaceDetectionExample.csproj", "{9F8FB859-A4AE-4705-BE12-9382DF46E834}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZoomShiftBox", "ZoomShiftBox\ZoomShiftBox.csproj", "{486C6C05-8599-4750-B753-3DEF28C58D3C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -41,6 +43,14 @@ Global
 		{9F8FB859-A4AE-4705-BE12-9382DF46E834}.Release|Any CPU.Build.0 = Release|Any CPU
 		{9F8FB859-A4AE-4705-BE12-9382DF46E834}.Release|x64.ActiveCfg = Release|Any CPU
 		{9F8FB859-A4AE-4705-BE12-9382DF46E834}.Release|x64.Build.0 = Release|Any CPU
+		{486C6C05-8599-4750-B753-3DEF28C58D3C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{486C6C05-8599-4750-B753-3DEF28C58D3C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{486C6C05-8599-4750-B753-3DEF28C58D3C}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{486C6C05-8599-4750-B753-3DEF28C58D3C}.Debug|x64.Build.0 = Debug|Any CPU
+		{486C6C05-8599-4750-B753-3DEF28C58D3C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{486C6C05-8599-4750-B753-3DEF28C58D3C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{486C6C05-8599-4750-B753-3DEF28C58D3C}.Release|x64.ActiveCfg = Release|Any CPU
+		{486C6C05-8599-4750-B753-3DEF28C58D3C}.Release|x64.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
